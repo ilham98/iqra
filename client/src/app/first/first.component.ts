@@ -12,7 +12,7 @@ export class FirstComponent implements OnInit {
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get('http://iqraa.herokuapp.com/api/books')
+    this.http.get('https://iqraa.herokuapp.com/api/books')
       .subscribe(data => {
         this.books = data;
       })
