@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-first',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first.component.scss']
 })
 export class FirstComponent implements OnInit {
-
-  constructor() { }
+  title = 'Tour of Heroes';
+  books;
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get('http://127.0.0.1/api/books')
+      .subscribe(data => {
+        this.books = data;
+      })
   }
 
 }
