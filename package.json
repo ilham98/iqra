@@ -1,0 +1,27 @@
+{
+  "name": "iqra-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilham98/iqra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilham98/iqra/issues"
+  },
+  "homepage": "https://github.com/ilham98/iqra#readme",
+  "description": "",
+  "engines": {
+    "node": "12.x"
+  }
+}
