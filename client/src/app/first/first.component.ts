@@ -9,10 +9,11 @@ import { HttpClient } from '@angular/common/http';
 export class FirstComponent implements OnInit {
   title = 'Tour of Heroes';
   books;
+  url = process.env.BASE_URL || '127.0.0.1';
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get('https://iqraa.herokuapp.com/api/books')
+    this.http.get(`${this.url}/api/books`)
       .subscribe(data => {
         this.books = data;
       })
