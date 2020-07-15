@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-first',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class FirstComponent implements OnInit {
   title = 'Tour of Heroes';
   books;
-  url = process.env.BASE_URL || '127.0.0.1';
+  url = environment.apiUrl;
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
